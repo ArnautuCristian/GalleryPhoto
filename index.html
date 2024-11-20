@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Galerie Foto</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1 class="cen">Galerie Foto</h1>
+        <h3>O simpla galerie foto</h3>
+        <h3>Niste detalii:</h3>
+        <h4>
+            Daca dai click pe imagine aceasta se deschide cu un modal <br>
+            Galeria este responsiva si merge si pe alte tehnologii(telefoane mobile, tablete, laptop-uri).
+        </h4>
+    </div>
+    
+    <div class="gallery">
+        <img class="four-grid-cells myImg" src="/image/1.jpg" alt="Imagine1" />
+        <img class="myImg" src="/image/2.jpg" alt="Imagine2" />
+        <img class="wide-image myImg" src="/image/3.jpg" alt="Imagine3" />
+        <img class="myImg" src="/image/4.jpeg" alt="Imagine4" />
+        <img class="myImg" src="/image/5.jpg" alt="Imagine5" />
+        <img class="wide-image myImg" src="/image/6.jpg" alt="Imagine6" />
+        <img class="myImg" src="/image/7.jpg" alt="Imagine7" />
+        <img class="myImg" src="/image/1.jpg" alt="Imagine8" />
+        <img class="four-grid-cells myImg" src="/image/2.jpg" alt="Imagine9" />
+        <img class="myImg" src="/image/3.jpg" alt="Imagine10" />
+        <img class="wide-image myImg" src="/image/4.jpeg" alt="Imagine11" />
+        <img class="myImg" src="/image/5.jpg" alt="Imagine12" />
+        <img class="myImg" src="/image/6.jpg" alt="Imagine13" />
+        <img class="wide-image myImg" src="/image/7.jpg" alt="Imagine14" />
+        <img class="myImg" src="/image/1.jpg" alt="Imagine8" />
+        <img class="four-grid-cells myImg" src="/image/2.jpg" alt="Imagine9" />
+        <img class="myImg" src="/image/3.jpg" alt="Imagine10" />
+        <img class="wide-image myImg" src="/image/4.jpeg" alt="Imagine11" />
+        <img class="myImg" src="/image/5.jpg" alt="Imagine12" />
+        <img class="myImg" src="/image/6.jpg" alt="Imagine13" />
+        <img class="wide-image myImg" src="/image/7.jpg" alt="Imagine14" />
+        <img class="myImg" src="/image/1.jpg" alt="Imagine15" />
+        <img class="four-grid-cells myImg" src="/image/2.jpg" alt="Imagine16" />
+        <img class="wide-image myImg" src="/image/3.jpg" alt="Imagine17" />
+        <img class="myImg" src="/image/4.jpeg" alt="Imagine18" />
+        <img class="myImg" src="/image/4.jpeg" alt="Imagine18" />
+        <img class="myImg" src="/image/5.jpg" alt="Imagine19" />
+        <img class="wide-image myImg" src="/image/6.jpg" alt="Imagine20" />
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="img01 modal-content" id="">
+        <div id="caption"></div>
+    </div>
+    <script>
+        let modal = document.getElementById("myModal");
+        let modalImg = document.querySelector(".img01");
+        let captionText = document.getElementById("caption");
+        let images = document.querySelectorAll(".myImg");
+        images.forEach((img) => { img.onclick = function () { modal.style.display = "block"; modalImg.src = this.src; captionText.innerHTML = this.alt; } });
+        let span = document.getElementsByClassName("close")[0];
+        span.onclick = function () { modal.style.display = "none"; };
+    </script>
+</body>
+
+</html>
