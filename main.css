@@ -108,6 +108,7 @@ img.wide-image {
     color: #ccc;
     padding: 10px 0;
     height: 150px;
+    overflow: auto;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -150,4 +151,12 @@ img.wide-image {
     .modal-content {
         width: 100%;
     }
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Reduce dimensiunea imaginii */
+    max-width: 1200px; /* Limitează lățimea imaginii */
+    max-height: 80vh; /* Limitează înălțimea imaginii la 80% din înălțimea ferestrei */
+    object-fit: contain; /* Păstrează proporțiile imaginii */
 }
